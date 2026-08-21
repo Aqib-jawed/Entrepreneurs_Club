@@ -1,0 +1,158 @@
+export const EVENTS = [
+	(
+	// TODO: replace placeholder event details
+	{
+		id: "01",
+		title: "E-Summit Innovation Pitch",
+		date: "2026-03-15",
+		displayDate: "MARCH 15, 2026",
+		coverImage: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?q=80&w=1600&auto=format&fit=crop",
+		domain: "Venture & Strategy",
+		attendance: "350+ Participants",
+		outcome: "🏆 35 Startup ideas pitched, ₹2.5L in seed grants awarded.",
+		gallery: [
+			"https://images.unsplash.com/photo-1475721027785-f74eccf877e2?q=80&w=600&auto=format&fit=crop",
+			"https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=600&auto=format&fit=crop",
+			"https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=600&auto=format&fit=crop"
+		],
+		description: "Annual flagship entrepreneurship summit featuring keynote venture capitalists, startup mentors, and high-stakes pitch battles across university chapters.",
+		featured: true
+	}),
+	(
+	// TODO: replace placeholder event details
+	{
+		id: "02",
+		title: "Fuel & MySoil Hackathon",
+		date: "2026-02-20",
+		displayDate: "FEBRUARY 20, 2026",
+		coverImage: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1600&auto=format&fit=crop",
+		domain: "Technical & AgriTech",
+		attendance: "220 Hackers",
+		outcome: "🌱 12 Prototype soil-testing IoT modules built in 24 hrs.",
+		gallery: ["https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=600&auto=format&fit=crop", "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=600&auto=format&fit=crop"],
+		description: "Hands-on hardware and software hackathon focused on sustainable agriculture, IoT sensors, and clean energy innovation.",
+		featured: true
+	}),
+	(
+	// TODO: replace placeholder event details
+	{
+		id: "03",
+		title: "Chai Chats Fireside",
+		date: "2026-01-28",
+		displayDate: "JANUARY 28, 2026",
+		coverImage: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=1600&auto=format&fit=crop",
+		domain: "Chai Chats",
+		attendance: "120 Attendees",
+		outcome: "☕ 4 Guest founders shared raw startup failure & turnaround lessons.",
+		gallery: ["https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=600&auto=format&fit=crop"],
+		description: "Casual informal networking session connecting aspiring student founders with seasoned ecosystem mentors over tea and candid stories.",
+		featured: true
+	}),
+	(
+	// TODO: replace placeholder event details
+	{
+		id: "04",
+		title: "Product Design Sprint",
+		date: "2025-12-10",
+		displayDate: "DECEMBER 10, 2025",
+		coverImage: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600&auto=format&fit=crop",
+		domain: "Design & UI/UX",
+		attendance: "180 Designers",
+		outcome: "🎨 15 Complete Figma design systems launched for campus projects.",
+		gallery: ["https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop"],
+		description: "Intensive UI/UX design sprint mastering design token systems, interactive prototyping, and brand aesthetics.",
+		featured: true
+	}),
+	(
+	// TODO: replace placeholder event details
+	{
+		id: "05",
+		title: "Full-Stack Web Bootcamp",
+		date: "2025-11-14",
+		displayDate: "NOVEMBER 14, 2025",
+		coverImage: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1600&auto=format&fit=crop",
+		domain: "Technical",
+		attendance: "250 Developers",
+		outcome: "⚡ 25 Production-ready web apps deployed live on Vercel.",
+		gallery: ["https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=600&auto=format&fit=crop"],
+		description: "Practical developer workshop building production React apps, TypeScript architecture, and serverless backends.",
+		featured: true
+	}),
+	(
+	// TODO: replace placeholder event details
+	{
+		id: "06",
+		title: "Marketing & Growth Summit",
+		date: "2025-10-05",
+		displayDate: "OCTOBER 05, 2025",
+		coverImage: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1600&auto=format&fit=crop",
+		domain: "Marketing",
+		attendance: "200 Students",
+		outcome: "🚀 5 Club campaign videos generated 100K+ organic impressions.",
+		gallery: ["https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=600&auto=format&fit=crop"],
+		description: "Deep dive into growth hacking, social media algorithms, content pipelines, and viral campus campaigns.",
+		featured: true
+	}),
+	(
+	// TODO: replace placeholder event details
+	{
+		id: "07",
+		title: "Sponsorship Pitch Clinic",
+		date: "2025-09-18",
+		displayDate: "SEPTEMBER 18, 2025",
+		coverImage: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1600&auto=format&fit=crop",
+		domain: "Sponsorship",
+		attendance: "90 Founders",
+		outcome: "💼 ₹5L Sponsorship deals secured for campus initiatives.",
+		gallery: ["https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=600&auto=format&fit=crop"],
+		description: "Corporate outreach training teaching students how to pitch corporate sponsors, craft sponsorship decks, and manage partner deliverables.",
+		featured: false
+	}),
+	(
+	// TODO: replace placeholder event details
+	{
+		id: "08",
+		title: "Event Ops Simulation",
+		date: "2025-08-22",
+		displayDate: "AUGUST 22, 2025",
+		coverImage: "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1600&auto=format&fit=crop",
+		domain: "Event Management",
+		attendance: "150 Organizers",
+		outcome: "🎟️ Zero-delay venue management framework executed.",
+		gallery: ["https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=600&auto=format&fit=crop"],
+		description: "Real-time simulation workshop for stage management, crowd control, audiovisual setups, and large-scale event logistics.",
+		featured: false
+	}),
+	(
+	// TODO: replace placeholder event details
+	{
+		id: "09",
+		title: "Content Writing Masterclass",
+		date: "2025-07-30",
+		displayDate: "JULY 30, 2025",
+		coverImage: "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+		domain: "Content Writing",
+		attendance: "110 Writers",
+		outcome: "✍️ 30 Editorial articles published across club publications.",
+		gallery: ["https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=600&auto=format&fit=crop"],
+		description: "Masterclass covering persuasive copywriting, newsletter architecture, press releases, and editorial storytelling.",
+		featured: false
+	}),
+	(
+	// TODO: replace placeholder event details
+	{
+		id: "10",
+		title: "Venture Demo Day",
+		date: "2025-06-15",
+		displayDate: "JUNE 15, 2025",
+		coverImage: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1600&auto=format&fit=crop",
+		domain: "Venture Creation",
+		attendance: "400+ Audience",
+		outcome: "🚀 8 Incubated student startups pitched to angel investor panel.",
+		gallery: ["https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=600&auto=format&fit=crop"],
+		description: "Culmination demo day presenting 6 months of student venture incubation to venture funds, alumni founders, and media.",
+		featured: false
+	})
+];
+
+//# sourceMappingURL=data:application/json;base64,eyJtYXBwaW5ncyI6IkFBY0EsT0FBTyxNQUFNLFNBQXNCOzs7Q0FFakM7RUFDRSxJQUFJO0VBQ0osT0FBTztFQUNQLE1BQU07RUFDTixhQUFhO0VBQ2IsWUFBWTtFQUNaLFFBQVE7RUFDUixZQUFZO0VBQ1osU0FBUztFQUNULFNBQVM7R0FDUDtHQUNBO0dBQ0E7RUFDRjtFQUNBLGFBQWE7RUFDYixVQUFVO0NBQ1o7OztDQUVBO0VBQ0UsSUFBSTtFQUNKLE9BQU87RUFDUCxNQUFNO0VBQ04sYUFBYTtFQUNiLFlBQVk7RUFDWixRQUFRO0VBQ1IsWUFBWTtFQUNaLFNBQVM7RUFDVCxTQUFTLENBQ1AsZ0dBQ0EsOEZBQ0Y7RUFDQSxhQUFhO0VBQ2IsVUFBVTtDQUNaOzs7Q0FFQTtFQUNFLElBQUk7RUFDSixPQUFPO0VBQ1AsTUFBTTtFQUNOLGFBQWE7RUFDYixZQUFZO0VBQ1osUUFBUTtFQUNSLFlBQVk7RUFDWixTQUFTO0VBQ1QsU0FBUyxDQUNQLDhGQUNGO0VBQ0EsYUFBYTtFQUNiLFVBQVU7Q0FDWjs7O0NBRUE7RUFDRSxJQUFJO0VBQ0osT0FBTztFQUNQLE1BQU07RUFDTixhQUFhO0VBQ2IsWUFBWTtFQUNaLFFBQVE7RUFDUixZQUFZO0VBQ1osU0FBUztFQUNULFNBQVMsQ0FDUCw4RkFDRjtFQUNBLGFBQWE7RUFDYixVQUFVO0NBQ1o7OztDQUVBO0VBQ0UsSUFBSTtFQUNKLE9BQU87RUFDUCxNQUFNO0VBQ04sYUFBYTtFQUNiLFlBQVk7RUFDWixRQUFRO0VBQ1IsWUFBWTtFQUNaLFNBQVM7RUFDVCxTQUFTLENBQ1AsOEZBQ0Y7RUFDQSxhQUFhO0VBQ2IsVUFBVTtDQUNaOzs7Q0FFQTtFQUNFLElBQUk7RUFDSixPQUFPO0VBQ1AsTUFBTTtFQUNOLGFBQWE7RUFDYixZQUFZO0VBQ1osUUFBUTtFQUNSLFlBQVk7RUFDWixTQUFTO0VBQ1QsU0FBUyxDQUNQLDJGQUNGO0VBQ0EsYUFBYTtFQUNiLFVBQVU7Q0FDWjs7O0NBRUE7RUFDRSxJQUFJO0VBQ0osT0FBTztFQUNQLE1BQU07RUFDTixhQUFhO0VBQ2IsWUFBWTtFQUNaLFFBQVE7RUFDUixZQUFZO0VBQ1osU0FBUztFQUNULFNBQVMsQ0FDUCwyRkFDRjtFQUNBLGFBQWE7RUFDYixVQUFVO0NBQ1o7OztDQUVBO0VBQ0UsSUFBSTtFQUNKLE9BQU87RUFDUCxNQUFNO0VBQ04sYUFBYTtFQUNiLFlBQVk7RUFDWixRQUFRO0VBQ1IsWUFBWTtFQUNaLFNBQVM7RUFDVCxTQUFTLENBQ1AsOEZBQ0Y7RUFDQSxhQUFhO0VBQ2IsVUFBVTtDQUNaOzs7Q0FFQTtFQUNFLElBQUk7RUFDSixPQUFPO0VBQ1AsTUFBTTtFQUNOLGFBQWE7RUFDYixZQUFZO0VBQ1osUUFBUTtFQUNSLFlBQVk7RUFDWixTQUFTO0VBQ1QsU0FBUyxDQUNQLDhGQUNGO0VBQ0EsYUFBYTtFQUNiLFVBQVU7Q0FDWjs7O0NBRUE7RUFDRSxJQUFJO0VBQ0osT0FBTztFQUNQLE1BQU07RUFDTixhQUFhO0VBQ2IsWUFBWTtFQUNaLFFBQVE7RUFDUixZQUFZO0VBQ1osU0FBUztFQUNULFNBQVMsQ0FDUCw4RkFDRjtFQUNBLGFBQWE7RUFDYixVQUFVO0NBQ1o7QUFDRiIsIm5hbWVzIjpbXSwic291cmNlcyI6WyJldmVudHMudHMiXSwidmVyc2lvbiI6Mywic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGludGVyZmFjZSBDbHViRXZlbnQge1xuICBpZDogc3RyaW5nO1xuICB0aXRsZTogc3RyaW5nO1xuICBkYXRlOiBzdHJpbmc7IC8vIFlZWVktTU0tREQgZm9yIHNvcnRpbmdcbiAgZGlzcGxheURhdGU6IHN0cmluZztcbiAgY292ZXJJbWFnZTogc3RyaW5nO1xuICBkb21haW46IHN0cmluZztcbiAgYXR0ZW5kYW5jZTogc3RyaW5nO1xuICBvdXRjb21lOiBzdHJpbmc7IC8vIFByb21pbmVudCBlbWJlciBhY2NlbnQgbGluZVxuICBnYWxsZXJ5OiBzdHJpbmdbXTtcbiAgZGVzY3JpcHRpb246IHN0cmluZztcbiAgZmVhdHVyZWQ6IGJvb2xlYW47XG59XG5cbmV4cG9ydCBjb25zdCBFVkVOVFM6IENsdWJFdmVudFtdID0gW1xuICAvLyBUT0RPOiByZXBsYWNlIHBsYWNlaG9sZGVyIGV2ZW50IGRldGFpbHNcbiAge1xuICAgIGlkOiAnMDEnLFxuICAgIHRpdGxlOiAnRS1TdW1taXQgSW5ub3ZhdGlvbiBQaXRjaCcsXG4gICAgZGF0ZTogJzIwMjYtMDMtMTUnLFxuICAgIGRpc3BsYXlEYXRlOiAnTUFSQ0ggMTUsIDIwMjYnLFxuICAgIGNvdmVySW1hZ2U6ICdodHRwczovL2ltYWdlcy51bnNwbGFzaC5jb20vcGhvdG8tMTQ3NTcyMTAyNzc4NS1mNzRlY2NmODc3ZTI/cT04MCZ3PTE2MDAmYXV0bz1mb3JtYXQmZml0PWNyb3AnLFxuICAgIGRvbWFpbjogJ1ZlbnR1cmUgJiBTdHJhdGVneScsXG4gICAgYXR0ZW5kYW5jZTogJzM1MCsgUGFydGljaXBhbnRzJyxcbiAgICBvdXRjb21lOiAn8J+PhiAzNSBTdGFydHVwIGlkZWFzIHBpdGNoZWQsIOKCuTIuNUwgaW4gc2VlZCBncmFudHMgYXdhcmRlZC4nLFxuICAgIGdhbGxlcnk6IFtcbiAgICAgICdodHRwczovL2ltYWdlcy51bnNwbGFzaC5jb20vcGhvdG8tMTQ3NTcyMTAyNzc4NS1mNzRlY2NmODc3ZTI/cT04MCZ3PTYwMCZhdXRvPWZvcm1hdCZmaXQ9Y3JvcCcsXG4gICAgICAnaHR0cHM6Ly9pbWFnZXMudW5zcGxhc2guY29tL3Bob3RvLTE1MTE1NzgzMTQzMjItMzc5YWZiNDc2ODY1P3E9ODAmdz02MDAmYXV0bz1mb3JtYXQmZml0PWNyb3AnLFxuICAgICAgJ2h0dHBzOi8vaW1hZ2VzLnVuc3BsYXNoLmNvbS9waG90by0xNTQwNTc1NDY3MDYzLTE3OGE1MGMyZGY4Nz9xPTgwJnc9NjAwJmF1dG89Zm9ybWF0JmZpdD1jcm9wJyxcbiAgICBdLFxuICAgIGRlc2NyaXB0aW9uOiAnQW5udWFsIGZsYWdzaGlwIGVudHJlcHJlbmV1cnNoaXAgc3VtbWl0IGZlYXR1cmluZyBrZXlub3RlIHZlbnR1cmUgY2FwaXRhbGlzdHMsIHN0YXJ0dXAgbWVudG9ycywgYW5kIGhpZ2gtc3Rha2VzIHBpdGNoIGJhdHRsZXMgYWNyb3NzIHVuaXZlcnNpdHkgY2hhcHRlcnMuJyxcbiAgICBmZWF0dXJlZDogdHJ1ZSxcbiAgfSxcbiAgLy8gVE9ETzogcmVwbGFjZSBwbGFjZWhvbGRlciBldmVudCBkZXRhaWxzXG4gIHtcbiAgICBpZDogJzAyJyxcbiAgICB0aXRsZTogJ0Z1ZWwgJiBNeVNvaWwgSGFja2F0aG9uJyxcbiAgICBkYXRlOiAnMjAyNi0wMi0yMCcsXG4gICAgZGlzcGxheURhdGU6ICdGRUJSVUFSWSAyMCwgMjAyNicsXG4gICAgY292ZXJJbWFnZTogJ2h0dHBzOi8vaW1hZ2VzLnVuc3BsYXNoLmNvbS9waG90by0xNTMxNDgyNjE1NzEzLTJhZmQ2OTA5Nzk5OD9xPTgwJnc9MTYwMCZhdXRvPWZvcm1hdCZmaXQ9Y3JvcCcsXG4gICAgZG9tYWluOiAnVGVjaG5pY2FsICYgQWdyaVRlY2gnLFxuICAgIGF0dGVuZGFuY2U6ICcyMjAgSGFja2VycycsXG4gICAgb3V0Y29tZTogJ/CfjLEgMTIgUHJvdG90eXBlIHNvaWwtdGVzdGluZyBJb1QgbW9kdWxlcyBidWlsdCBpbiAyNCBocnMuJyxcbiAgICBnYWxsZXJ5OiBbXG4gICAgICAnaHR0cHM6Ly9pbWFnZXMudW5zcGxhc2guY29tL3Bob3RvLTE1MzE0ODI2MTU3MTMtMmFmZDY5MDk3OTk4P3E9ODAmdz02MDAmYXV0bz1mb3JtYXQmZml0PWNyb3AnLFxuICAgICAgJ2h0dHBzOi8vaW1hZ2VzLnVuc3BsYXNoLmNvbS9waG90by0xNTE3Njk0NzEyMjAyLTE0ZGQ5NTM4YWE5Nz9xPTgwJnc9NjAwJmF1dG89Zm9ybWF0JmZpdD1jcm9wJyxcbiAgICBdLFxuICAgIGRlc2NyaXB0aW9uOiAnSGFuZHMtb24gaGFyZHdhcmUgYW5kIHNvZnR3YXJlIGhhY2thdGhvbiBmb2N1c2VkIG9uIHN1c3RhaW5hYmxlIGFncmljdWx0dXJlLCBJb1Qgc2Vuc29ycywgYW5kIGNsZWFuIGVuZXJneSBpbm5vdmF0aW9uLicsXG4gICAgZmVhdHVyZWQ6IHRydWUsXG4gIH0sXG4gIC8vIFRPRE86IHJlcGxhY2UgcGxhY2Vob2xkZXIgZXZlbnQgZGV0YWlsc1xuICB7XG4gICAgaWQ6ICcwMycsXG4gICAgdGl0bGU6ICdDaGFpIENoYXRzIEZpcmVzaWRlJyxcbiAgICBkYXRlOiAnMjAyNi0wMS0yOCcsXG4gICAgZGlzcGxheURhdGU6ICdKQU5VQVJZIDI4LCAyMDI2JyxcbiAgICBjb3ZlckltYWdlOiAnaHR0cHM6Ly9pbWFnZXMudW5zcGxhc2guY29tL3Bob3RvLTE1MTUxODcwMjkxMzUtMThlZTI4NmQ4MTViP3E9ODAmdz0xNjAwJmF1dG89Zm9ybWF0JmZpdD1jcm9wJyxcbiAgICBkb21haW46ICdDaGFpIENoYXRzJyxcbiAgICBhdHRlbmRhbmNlOiAnMTIwIEF0dGVuZGVlcycsXG4gICAgb3V0Y29tZTogJ+KYlSA0IEd1ZXN0IGZvdW5kZXJzIHNoYXJlZCByYXcgc3RhcnR1cCBmYWlsdXJlICYgdHVybmFyb3VuZCBsZXNzb25zLicsXG4gICAgZ2FsbGVyeTogW1xuICAgICAgJ2h0dHBzOi8vaW1hZ2VzLnVuc3BsYXNoLmNvbS9waG90by0xNTE1MTg3MDI5MTM1LTE4ZWUyODZkODE1Yj9xPTgwJnc9NjAwJmF1dG89Zm9ybWF0JmZpdD1jcm9wJyxcbiAgICBdLFxuICAgIGRlc2NyaXB0aW9uOiAnQ2FzdWFsIGluZm9ybWFsIG5ldHdvcmtpbmcgc2Vzc2lvbiBjb25uZWN0aW5nIGFzcGlyaW5nIHN0dWRlbnQgZm91bmRlcnMgd2l0aCBzZWFzb25lZCBlY29zeXN0ZW0gbWVudG9ycyBvdmVyIHRlYSBhbmQgY2FuZGlkIHN0b3JpZXMuJyxcbiAgICBmZWF0dXJlZDogdHJ1ZSxcbiAgfSxcbiAgLy8gVE9ETzogcmVwbGFjZSBwbGFjZWhvbGRlciBldmVudCBkZXRhaWxzXG4gIHtcbiAgICBpZDogJzA0JyxcbiAgICB0aXRsZTogJ1Byb2R1Y3QgRGVzaWduIFNwcmludCcsXG4gICAgZGF0ZTogJzIwMjUtMTItMTAnLFxuICAgIGRpc3BsYXlEYXRlOiAnREVDRU1CRVIgMTAsIDIwMjUnLFxuICAgIGNvdmVySW1hZ2U6ICdodHRwczovL2ltYWdlcy51bnNwbGFzaC5jb20vcGhvdG8tMTUyMjA3MTgyMDA4MS0wMDlmMDEyOWM3MWM/cT04MCZ3PTE2MDAmYXV0bz1mb3JtYXQmZml0PWNyb3AnLFxuICAgIGRvbWFpbjogJ0Rlc2lnbiAmIFVJL1VYJyxcbiAgICBhdHRlbmRhbmNlOiAnMTgwIERlc2lnbmVycycsXG4gICAgb3V0Y29tZTogJ/CfjqggMTUgQ29tcGxldGUgRmlnbWEgZGVzaWduIHN5c3RlbXMgbGF1bmNoZWQgZm9yIGNhbXB1cyBwcm9qZWN0cy4nLFxuICAgIGdhbGxlcnk6IFtcbiAgICAgICdodHRwczovL2ltYWdlcy51bnNwbGFzaC5jb20vcGhvdG8tMTUyMjA3MTgyMDA4MS0wMDlmMDEyOWM3MWM/cT04MCZ3PTYwMCZhdXRvPWZvcm1hdCZmaXQ9Y3JvcCcsXG4gICAgXSxcbiAgICBkZXNjcmlwdGlvbjogJ0ludGVuc2l2ZSBVSS9VWCBkZXNpZ24gc3ByaW50IG1hc3RlcmluZyBkZXNpZ24gdG9rZW4gc3lzdGVtcywgaW50ZXJhY3RpdmUgcHJvdG90eXBpbmcsIGFuZCBicmFuZCBhZXN0aGV0aWNzLicsXG4gICAgZmVhdHVyZWQ6IHRydWUsXG4gIH0sXG4gIC8vIFRPRE86IHJlcGxhY2UgcGxhY2Vob2xkZXIgZXZlbnQgZGV0YWlsc1xuICB7XG4gICAgaWQ6ICcwNScsXG4gICAgdGl0bGU6ICdGdWxsLVN0YWNrIFdlYiBCb290Y2FtcCcsXG4gICAgZGF0ZTogJzIwMjUtMTEtMTQnLFxuICAgIGRpc3BsYXlEYXRlOiAnTk9WRU1CRVIgMTQsIDIwMjUnLFxuICAgIGNvdmVySW1hZ2U6ICdodHRwczovL2ltYWdlcy51bnNwbGFzaC5jb20vcGhvdG8tMTUxNzY5NDcxMjIwMi0xNGRkOTUzOGFhOTc/cT04MCZ3PTE2MDAmYXV0bz1mb3JtYXQmZml0PWNyb3AnLFxuICAgIGRvbWFpbjogJ1RlY2huaWNhbCcsXG4gICAgYXR0ZW5kYW5jZTogJzI1MCBEZXZlbG9wZXJzJyxcbiAgICBvdXRjb21lOiAn4pqhIDI1IFByb2R1Y3Rpb24tcmVhZHkgd2ViIGFwcHMgZGVwbG95ZWQgbGl2ZSBvbiBWZXJjZWwuJyxcbiAgICBnYWxsZXJ5OiBbXG4gICAgICAnaHR0cHM6Ly9pbWFnZXMudW5zcGxhc2guY29tL3Bob3RvLTE1MTc2OTQ3MTIyMDItMTRkZDk1MzhhYTk3P3E9ODAmdz02MDAmYXV0bz1mb3JtYXQmZml0PWNyb3AnLFxuICAgIF0sXG4gICAgZGVzY3JpcHRpb246ICdQcmFjdGljYWwgZGV2ZWxvcGVyIHdvcmtzaG9wIGJ1aWxkaW5nIHByb2R1Y3Rpb24gUmVhY3QgYXBwcywgVHlwZVNjcmlwdCBhcmNoaXRlY3R1cmUsIGFuZCBzZXJ2ZXJsZXNzIGJhY2tlbmRzLicsXG4gICAgZmVhdHVyZWQ6IHRydWUsXG4gIH0sXG4gIC8vIFRPRE86IHJlcGxhY2UgcGxhY2Vob2xkZXIgZXZlbnQgZGV0YWlsc1xuICB7XG4gICAgaWQ6ICcwNicsXG4gICAgdGl0bGU6ICdNYXJrZXRpbmcgJiBHcm93dGggU3VtbWl0JyxcbiAgICBkYXRlOiAnMjAyNS0xMC0wNScsXG4gICAgZGlzcGxheURhdGU6ICdPQ1RPQkVSIDA1LCAyMDI1JyxcbiAgICBjb3ZlckltYWdlOiAnaHR0cHM6Ly9pbWFnZXMudW5zcGxhc2guY29tL3Bob3RvLTE1NTc4MDQ1MDYtNjY5YTY3OTY1YmEwP3E9ODAmdz0xNjAwJmF1dG89Zm9ybWF0JmZpdD1jcm9wJyxcbiAgICBkb21haW46ICdNYXJrZXRpbmcnLFxuICAgIGF0dGVuZGFuY2U6ICcyMDAgU3R1ZGVudHMnLFxuICAgIG91dGNvbWU6ICfwn5qAIDUgQ2x1YiBjYW1wYWlnbiB2aWRlb3MgZ2VuZXJhdGVkIDEwMEsrIG9yZ2FuaWMgaW1wcmVzc2lvbnMuJyxcbiAgICBnYWxsZXJ5OiBbXG4gICAgICAnaHR0cHM6Ly9pbWFnZXMudW5zcGxhc2guY29tL3Bob3RvLTE1NTc4MDQ1MDYtNjY5YTY3OTY1YmEwP3E9ODAmdz02MDAmYXV0bz1mb3JtYXQmZml0PWNyb3AnLFxuICAgIF0sXG4gICAgZGVzY3JpcHRpb246ICdEZWVwIGRpdmUgaW50byBncm93dGggaGFja2luZywgc29jaWFsIG1lZGlhIGFsZ29yaXRobXMsIGNvbnRlbnQgcGlwZWxpbmVzLCBhbmQgdmlyYWwgY2FtcHVzIGNhbXBhaWducy4nLFxuICAgIGZlYXR1cmVkOiB0cnVlLFxuICB9LFxuICAvLyBUT0RPOiByZXBsYWNlIHBsYWNlaG9sZGVyIGV2ZW50IGRldGFpbHNcbiAge1xuICAgIGlkOiAnMDcnLFxuICAgIHRpdGxlOiAnU3BvbnNvcnNoaXAgUGl0Y2ggQ2xpbmljJyxcbiAgICBkYXRlOiAnMjAyNS0wOS0xOCcsXG4gICAgZGlzcGxheURhdGU6ICdTRVBURU1CRVIgMTgsIDIwMjUnLFxuICAgIGNvdmVySW1hZ2U6ICdodHRwczovL2ltYWdlcy51bnNwbGFzaC5jb20vcGhvdG8tMTU1Njc2MTE3NS01OTczZGMwZjMyZTc/cT04MCZ3PTE2MDAmYXV0bz1mb3JtYXQmZml0PWNyb3AnLFxuICAgIGRvbWFpbjogJ1Nwb25zb3JzaGlwJyxcbiAgICBhdHRlbmRhbmNlOiAnOTAgRm91bmRlcnMnLFxuICAgIG91dGNvbWU6ICfwn5K8IOKCuTVMIFNwb25zb3JzaGlwIGRlYWxzIHNlY3VyZWQgZm9yIGNhbXB1cyBpbml0aWF0aXZlcy4nLFxuICAgIGdhbGxlcnk6IFtcbiAgICAgICdodHRwczovL2ltYWdlcy51bnNwbGFzaC5jb20vcGhvdG8tMTU1Njc2MTE3NS01OTczZGMwZjMyZTc/cT04MCZ3PTYwMCZhdXRvPWZvcm1hdCZmaXQ9Y3JvcCcsXG4gICAgXSxcbiAgICBkZXNjcmlwdGlvbjogJ0NvcnBvcmF0ZSBvdXRyZWFjaCB0cmFpbmluZyB0ZWFjaGluZyBzdHVkZW50cyBob3cgdG8gcGl0Y2ggY29ycG9yYXRlIHNwb25zb3JzLCBjcmFmdCBzcG9uc29yc2hpcCBkZWNrcywgYW5kIG1hbmFnZSBwYXJ0bmVyIGRlbGl2ZXJhYmxlcy4nLFxuICAgIGZlYXR1cmVkOiBmYWxzZSxcbiAgfSxcbiAgLy8gVE9ETzogcmVwbGFjZSBwbGFjZWhvbGRlciBldmVudCBkZXRhaWxzXG4gIHtcbiAgICBpZDogJzA4JyxcbiAgICB0aXRsZTogJ0V2ZW50IE9wcyBTaW11bGF0aW9uJyxcbiAgICBkYXRlOiAnMjAyNS0wOC0yMicsXG4gICAgZGlzcGxheURhdGU6ICdBVUdVU1QgMjIsIDIwMjUnLFxuICAgIGNvdmVySW1hZ2U6ICdodHRwczovL2ltYWdlcy51bnNwbGFzaC5jb20vcGhvdG8tMTUxMTU3ODMxNDMyMi0zNzlhZmI0NzY4NjU/cT04MCZ3PTE2MDAmYXV0bz1mb3JtYXQmZml0PWNyb3AnLFxuICAgIGRvbWFpbjogJ0V2ZW50IE1hbmFnZW1lbnQnLFxuICAgIGF0dGVuZGFuY2U6ICcxNTAgT3JnYW5pemVycycsXG4gICAgb3V0Y29tZTogJ/Cfjp/vuI8gWmVyby1kZWxheSB2ZW51ZSBtYW5hZ2VtZW50IGZyYW1ld29yayBleGVjdXRlZC4nLFxuICAgIGdhbGxlcnk6IFtcbiAgICAgICdodHRwczovL2ltYWdlcy51bnNwbGFzaC5jb20vcGhvdG8tMTUxMTU3ODMxNDMyMi0zNzlhZmI0NzY4NjU/cT04MCZ3PTYwMCZhdXRvPWZvcm1hdCZmaXQ9Y3JvcCcsXG4gICAgXSxcbiAgICBkZXNjcmlwdGlvbjogJ1JlYWwtdGltZSBzaW11bGF0aW9uIHdvcmtzaG9wIGZvciBzdGFnZSBtYW5hZ2VtZW50LCBjcm93ZCBjb250cm9sLCBhdWRpb3Zpc3VhbCBzZXR1cHMsIGFuZCBsYXJnZS1zY2FsZSBldmVudCBsb2dpc3RpY3MuJyxcbiAgICBmZWF0dXJlZDogZmFsc2UsXG4gIH0sXG4gIC8vIFRPRE86IHJlcGxhY2UgcGxhY2Vob2xkZXIgZXZlbnQgZGV0YWlsc1xuICB7XG4gICAgaWQ6ICcwOScsXG4gICAgdGl0bGU6ICdDb250ZW50IFdyaXRpbmcgTWFzdGVyY2xhc3MnLFxuICAgIGRhdGU6ICcyMDI1LTA3LTMwJyxcbiAgICBkaXNwbGF5RGF0ZTogJ0pVTFkgMzAsIDIwMjUnLFxuICAgIGNvdmVySW1hZ2U6ICdodHRwczovL2ltYWdlcy51bnNwbGFzaC5jb20vcGhvdG8tMTQ1NTM5MDU4MjI2Mi0wNDRjZGVhZDI3N2E/cT04MCZ3PTE2MDAmYXV0bz1mb3JtYXQmZml0PWNyb3AnLFxuICAgIGRvbWFpbjogJ0NvbnRlbnQgV3JpdGluZycsXG4gICAgYXR0ZW5kYW5jZTogJzExMCBXcml0ZXJzJyxcbiAgICBvdXRjb21lOiAn4pyN77iPIDMwIEVkaXRvcmlhbCBhcnRpY2xlcyBwdWJsaXNoZWQgYWNyb3NzIGNsdWIgcHVibGljYXRpb25zLicsXG4gICAgZ2FsbGVyeTogW1xuICAgICAgJ2h0dHBzOi8vaW1hZ2VzLnVuc3BsYXNoLmNvbS9waG90by0xNDU1MzkwNTgyMjYyLTA0NGNkZWFkMjc3YT9xPTgwJnc9NjAwJmF1dG89Zm9ybWF0JmZpdD1jcm9wJyxcbiAgICBdLFxuICAgIGRlc2NyaXB0aW9uOiAnTWFzdGVyY2xhc3MgY292ZXJpbmcgcGVyc3Vhc2l2ZSBjb3B5d3JpdGluZywgbmV3c2xldHRlciBhcmNoaXRlY3R1cmUsIHByZXNzIHJlbGVhc2VzLCBhbmQgZWRpdG9yaWFsIHN0b3J5dGVsbGluZy4nLFxuICAgIGZlYXR1cmVkOiBmYWxzZSxcbiAgfSxcbiAgLy8gVE9ETzogcmVwbGFjZSBwbGFjZWhvbGRlciBldmVudCBkZXRhaWxzXG4gIHtcbiAgICBpZDogJzEwJyxcbiAgICB0aXRsZTogJ1ZlbnR1cmUgRGVtbyBEYXknLFxuICAgIGRhdGU6ICcyMDI1LTA2LTE1JyxcbiAgICBkaXNwbGF5RGF0ZTogJ0pVTkUgMTUsIDIwMjUnLFxuICAgIGNvdmVySW1hZ2U6ICdodHRwczovL2ltYWdlcy51bnNwbGFzaC5jb20vcGhvdG8tMTU0MDU3NTQ2NzA2My0xNzhhNTBjMmRmODc/cT04MCZ3PTE2MDAmYXV0bz1mb3JtYXQmZml0PWNyb3AnLFxuICAgIGRvbWFpbjogJ1ZlbnR1cmUgQ3JlYXRpb24nLFxuICAgIGF0dGVuZGFuY2U6ICc0MDArIEF1ZGllbmNlJyxcbiAgICBvdXRjb21lOiAn8J+agCA4IEluY3ViYXRlZCBzdHVkZW50IHN0YXJ0dXBzIHBpdGNoZWQgdG8gYW5nZWwgaW52ZXN0b3IgcGFuZWwuJyxcbiAgICBnYWxsZXJ5OiBbXG4gICAgICAnaHR0cHM6Ly9pbWFnZXMudW5zcGxhc2guY29tL3Bob3RvLTE1NDA1NzU0NjcwNjMtMTc4YTUwYzJkZjg3P3E9ODAmdz02MDAmYXV0bz1mb3JtYXQmZml0PWNyb3AnLFxuICAgIF0sXG4gICAgZGVzY3JpcHRpb246ICdDdWxtaW5hdGlvbiBkZW1vIGRheSBwcmVzZW50aW5nIDYgbW9udGhzIG9mIHN0dWRlbnQgdmVudHVyZSBpbmN1YmF0aW9uIHRvIHZlbnR1cmUgZnVuZHMsIGFsdW1uaSBmb3VuZGVycywgYW5kIG1lZGlhLicsXG4gICAgZmVhdHVyZWQ6IGZhbHNlLFxuICB9LFxuXTtcbiJdfQ==
