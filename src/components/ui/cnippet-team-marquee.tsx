@@ -143,14 +143,14 @@ export function CnippetTeamMarquee() {
 
       {/* FULL-WIDTH Marquee Track (edge-to-edge) */}
       <div className="relative w-full overflow-hidden my-4 no-scrollbar">
-        {/* Prominent Edge Fade Gradients */}
-        <div className="pointer-events-none absolute top-0 left-0 z-30 h-full w-32 md:w-44 bg-gradient-to-r from-[#141822] via-[#141822]/85 to-transparent" />
-        <div className="pointer-events-none absolute top-0 right-0 z-30 h-full w-32 md:w-44 bg-gradient-to-l from-[#141822] via-[#141822]/85 to-transparent" />
+        {/* Edge Fade Gradients */}
+        <div className="pointer-events-none absolute top-0 left-0 z-30 h-full w-24 md:w-40 bg-gradient-to-r from-[#0E121A] to-transparent" />
+        <div className="pointer-events-none absolute top-0 right-0 z-30 h-full w-24 md:w-40 bg-gradient-to-l from-[#0E121A] to-transparent" />
 
         <Marquee className="[--gap:1.5rem]" pauseOnHover>
           {teamMembers.map((member) => (
             <div
-              className="group/card flex w-80 shrink-0 flex-col transition-transform duration-300 ease-out hover:-translate-y-2"
+              className="group/card flex w-80 shrink-0 flex-col transition-transform duration-300 ease-out hover:-translate-y-2 [transform:translateZ(0)]"
               key={member.name}
             >
               <div className="relative h-[420px] w-full overflow-hidden rounded-2xl bg-[#141822] border border-[#F5F3EE]/10 shadow-xl group-hover/card:border-[#E8A33D]/40 group-hover/card:shadow-2xl group-hover/card:shadow-[#E8A33D]/15 transition-all duration-300">
@@ -159,14 +159,18 @@ export function CnippetTeamMarquee() {
                   alt={member.name}
                   className="h-full w-full object-cover grayscale transition-all duration-500 group-hover/card:grayscale-0 group-hover/card:scale-105"
                   src={member.image}
+                  loading="lazy"
+                  decoding="async"
+                  width="320"
+                  height="420"
                 />
                 
                 {/* Dark Gradient Overlay at Bottom Section */}
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0B0E14] via-[#0B0E14]/85 to-transparent p-5 flex flex-col justify-end pointer-events-none rounded-b-2xl">
+                <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#0B0E14] via-[#0B0E14]/90 to-transparent p-5 flex flex-col justify-end pointer-events-none rounded-b-2xl">
                   <h3 className="font-bold text-white text-lg leading-snug truncate">
                     {member.name}
                   </h3>
-                  <p className="text-xs text-white/90 font-mono font-semibold mt-1">
+                  <p className="text-xs text-[#E8A33D] font-mono font-semibold mt-1">
                     {member.role}
                   </p>
                 </div>

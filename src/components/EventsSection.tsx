@@ -57,52 +57,74 @@ const Slide = ({ slide, index, current, handleSlideClick, onViewDetails, prefers
 
   const xRef = React.useRef(0);
   const yRef = React.useRef(0);
+  const currentXRef = React.useRef(0);
+  const currentYRef = React.useRef(0);
   const frameRef = React.useRef<number>();
+  const isAnimatingRef = React.useRef(false);
 
-  useEffect(() => {
-    if (prefersReducedMotion) return;
-    
+  const isActive = current === index;
+
+  const startAnimation = React.useCallback(() => {
+    if (isAnimatingRef.current || prefersReducedMotion || !isActive) return;
+    isAnimatingRef.current = true;
+
     const animate = () => {
-      if (!slideRef.current) return;
+      if (!slideRef.current) {
+        isAnimatingRef.current = false;
+        return;
+      }
+
       const targetX = xRef.current;
       const targetY = yRef.current;
-      
-      // Lerp for smooth parallax
-      const currentX = parseFloat(slideRef.current.style.getPropertyValue('--x') || '0');
-      const currentY = parseFloat(slideRef.current.style.getPropertyValue('--y') || '0');
-      
-      const nextX = currentX + (targetX - currentX) * 0.1;
-      const nextY = currentY + (targetY - currentY) * 0.1;
 
-      slideRef.current.style.setProperty("--x", `${nextX}px`);
-      slideRef.current.style.setProperty("--y", `${nextY}px`);
-      
+      currentXRef.current += (targetX - currentXRef.current) * 0.1;
+      currentYRef.current += (targetY - currentYRef.current) * 0.1;
+
+      slideRef.current.style.setProperty("--x", `${currentXRef.current.toFixed(2)}px`);
+      slideRef.current.style.setProperty("--y", `${currentYRef.current.toFixed(2)}px`);
+
+      const deltaX = Math.abs(targetX - currentXRef.current);
+      const deltaY = Math.abs(targetY - currentYRef.current);
+
+      if (deltaX < 0.1 && deltaY < 0.1 && targetX === 0 && targetY === 0) {
+        currentXRef.current = 0;
+        currentYRef.current = 0;
+        slideRef.current.style.setProperty("--x", "0px");
+        slideRef.current.style.setProperty("--y", "0px");
+        isAnimatingRef.current = false;
+        return;
+      }
+
       frameRef.current = requestAnimationFrame(animate);
     };
 
     frameRef.current = requestAnimationFrame(animate);
+  }, [isActive, prefersReducedMotion]);
 
+  useEffect(() => {
     return () => {
       if (frameRef.current) cancelAnimationFrame(frameRef.current);
+      isAnimatingRef.current = false;
     };
-  }, [prefersReducedMotion]);
+  }, []);
 
   const handleMouseMove = (event: React.MouseEvent) => {
-    if (prefersReducedMotion) return;
+    if (prefersReducedMotion || !isActive) return;
     const el = slideRef.current;
     if (!el) return;
     const r = el.getBoundingClientRect();
     xRef.current = event.clientX - (r.left + Math.floor(r.width / 2));
     yRef.current = event.clientY - (r.top + Math.floor(r.height / 2));
+    startAnimation();
   };
 
   const handleMouseLeave = () => {
     xRef.current = 0;
     yRef.current = 0;
+    startAnimation();
   };
 
   const { coverImage, outcome, title, displayDate } = slide;
-  const isActive = current === index;
 
   return (
     <div className="[perspective:1200px] [transform-style:preserve-3d]">
@@ -137,8 +159,8 @@ const Slide = ({ slide, index, current, handleSlideClick, onViewDetails, prefers
             }}
             alt={title}
             src={coverImage}
-            loading="eager"
-            decoding="sync"
+            loading={index === 0 ? "eager" : "lazy"}
+            decoding="async"
           />
           <div
             className={cn(

@@ -23,7 +23,7 @@ export function DomainsSection() {
     <section id="domains" className="domains-section">
       <div className="domains-container">
         <SectionHeading
-          tag="DISCIPLINARY HUB"
+          tag="DISCIPLINARY HUBS"
           title="Club Domains"
           subtitle="Explore the 12 active domains driving innovation, venture creation, and specialized skill development across Entrepreneurs Club."
         />

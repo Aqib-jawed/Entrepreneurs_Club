@@ -49,7 +49,7 @@ export const CountingNumber = forwardRef<
     ref,
   ) => {
     const containerRef = useRef<HTMLSpanElement>(null);
-    const isInView = useInView(containerRef, { once: false, amount: 0.3 });
+    const isInView = useInView(containerRef, { once: true, amount: 0.2 });
     const count = useMotionValue(from);
     const rounded = useTransform(count, (latest) =>
       Math.round(latest).toLocaleString()
