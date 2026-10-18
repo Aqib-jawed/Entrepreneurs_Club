@@ -1,3 +1,5 @@
+import type { WheelCarouselItem } from '@/components/ui/wheel-carousel';
+
 export interface TeamMember {
   id: string;
   name: string;
@@ -10,37 +12,98 @@ export interface TeamMember {
 export const CORE_TEAM: TeamMember[] = [
   {
     id: "president",
-    name: "Devemanya",
+    name: "Devamanaya",
     role: "President",
-    photo: "/team/president.jpg",
-    whatTheyOwn: "Sets overall club vision, leads university administration relations, and directs executive strategy.",
-    linkedin: "https://linkedin.com"
+    photo: "/president.jpg",
+    whatTheyOwn: "Directing strategic vision, university partnerships, and overall club trajectory.",
+    linkedin: "https://linkedin.com",
   },
-  // TODO: replace placeholder name/role/photo/linkedin
   {
-    id: "vice-president",
-    name: "Samantha Chen",
-    role: "Vice President",
-    photo: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'><rect width='300' height='300' fill='%23141821'/><circle cx='150' cy='150' r='120' fill='%231f2430' stroke='%23ffffff' stroke-width='2'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-family='sans-serif' font-size='72' font-weight='bold'>SC</text></svg>",
-    whatTheyOwn: "Manages cross-domain execution, internal club governance, and strategic venture partnerships.",
-    linkedin: "https://linkedin.com"
+    id: "backend-lead",
+    name: "Bhavya",
+    role: "Backend Lead",
+    photo: "/vp-backend.jpg",
+    whatTheyOwn: "Architecting server infrastructure, database models, and API integrations.",
+    linkedin: "https://linkedin.com",
   },
-  // TODO: replace placeholder name/role/photo/linkedin
   {
-    id: "operations-lead",
-    name: "Marcus Vance",
-    role: "Operations Lead",
-    photo: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'><rect width='300' height='300' fill='%23141821'/><circle cx='150' cy='150' r='120' fill='%231f2430' stroke='%23ffffff' stroke-width='2'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-family='sans-serif' font-size='72' font-weight='bold'>MV</text></svg>",
-    whatTheyOwn: "Oversees club budget allocation, event logistics systems, and member database operations.",
-    linkedin: "https://linkedin.com"
+    id: "frontend-lead",
+    name: "Ritisha",
+    role: "Frontend Lead",
+    photo: "/frontend-lead.jpg",
+    whatTheyOwn: "Building intuitive user interfaces, responsive layouts, and web experiences.",
+    linkedin: "https://linkedin.com",
   },
-  // TODO: replace placeholder name/role/photo/linkedin
   {
-    id: "events-lead",
-    name: "Elena Rostova",
-    role: "Events Lead",
-    photo: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'><rect width='300' height='300' fill='%23141821'/><circle cx='150' cy='150' r='120' fill='%231f2430' stroke='%23ffffff' stroke-width='2'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-family='sans-serif' font-size='72' font-weight='bold'>ER</text></svg>",
-    whatTheyOwn: "Directs national hackathon productions, demo day showcases, and founder retreat experiences.",
-    linkedin: "https://linkedin.com"
-  }
+    id: "secretary",
+    name: "Kavya",
+    role: "Secretary",
+    photo: "/secretary.png",
+    whatTheyOwn: "Managing club communications, documentation, meeting schedules, and compliance.",
+    linkedin: "https://linkedin.com",
+  },
+  {
+    id: "wise-lead",
+    name: "Sampurna",
+    role: "Wise Fuel & MySoil Lead",
+    photo: "/wise-lead.jpg",
+    whatTheyOwn: "Leading Wise Fuel & MySoil domain initiatives and sustainability projects.",
+    linkedin: "https://linkedin.com",
+  },
+  {
+    id: "workshops-lead",
+    name: "Pavan",
+    role: "Workshops & Bootcamps Lead",
+    photo: "/workshops-lead.jpg",
+    whatTheyOwn: "Organizing technical workshops, hands-on bootcamps, and skill sessions.",
+    linkedin: "https://linkedin.com",
+  },
+  {
+    id: "marketing-leads",
+    name: "Aurodruthi & Homamrutha",
+    role: "Marketing Leads",
+    photo: "/marketing-leads.jpg",
+    whatTheyOwn: "Driving brand awareness, social media campaigns, and marketing strategies.",
+    linkedin: "https://linkedin.com",
+  },
+  {
+    id: "content-lead",
+    name: "Chaitraya",
+    role: "Content Writing Lead",
+    photo: "/content-lead.jpg",
+    whatTheyOwn: "Crafting compelling newsletter content, event copy, and brand editorial.",
+    linkedin: "https://linkedin.com",
+  },
+  {
+    id: "event-management-leads",
+    name: "Vishal & Sanjith",
+    role: "Event Management Leads",
+    photo: "/event-management-leads.jpg",
+    whatTheyOwn: "Executing seamless event logistics, venue setup, and stage management.",
+    linkedin: "https://linkedin.com",
+  },
+  {
+    id: "design-lead",
+    name: "Charan",
+    role: "Creative Design Lead",
+    photo: "/design-lead.jpg",
+    whatTheyOwn: "Designing visual identity, posters, creative assets, and UI design systems.",
+    linkedin: "https://linkedin.com",
+  },
+  {
+    id: "sponsorship-lead",
+    name: "Satwik",
+    role: "Sponsorship Lead",
+    photo: "/sponsorship-lead.jpg",
+    whatTheyOwn: "Securing corporate sponsorships, sponsor relations, and funding partnerships.",
+    linkedin: "https://linkedin.com",
+  },
 ];
+
+export const LEADERSHIP_WHEEL_ITEMS: WheelCarouselItem[] = CORE_TEAM.map((member) => ({
+  label: member.name,
+  role: member.role,
+  image: member.photo,
+  imageAlt: `${member.name} - ${member.role}`,
+  whatTheyOwn: member.whatTheyOwn,
+}));

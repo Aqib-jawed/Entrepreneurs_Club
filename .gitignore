@@ -22,3 +22,13 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Temporary and case study files
+case-study-extracted/
+analyze_case.py
+hackathon_deep_analysis.py
+.chrome-cdp-profile*
+.edge-cdp-profile*
+.agents/
+__pycache__/
+*.py[cod]
