@@ -7,18 +7,43 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Dependencies and build outputs
+node_modules/
+dist/
+dist-ssr/
 *.local
 
-# Editor directories and files
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Editor and OS clutter
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
+Thumbs.db
+Desktop.ini
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+*.orig
+
+# Browser automation profiles and temporary test data
+.chrome-cdp/
+.chrome-cdp-*/
+.chrome-cdp-profile*/
+.edge-cdp/
+.edge-cdp-*/
+.edge-cdp-profile*/
+.temp-chrome/
+.temp-chrome-*/
+audit_screenshots/
+
+
+# Temporary backup of uncompressed raw camera images
+raw_backup/
+public/raw_backup/

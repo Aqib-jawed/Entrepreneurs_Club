@@ -8,6 +8,8 @@ import { ImpactSection } from '../ImpactSection';
 import { EventsSection } from '../EventsSection';
 import { DomainsSection } from '../DomainsSection';
 import { CoreTeamSection } from '../CoreTeamSection';
+import { JoinSection } from '../JoinSection';
+import { Footer } from '../Footer';
 
 export function ParallaxComponent() {
   const parallaxRef = useRef<HTMLDivElement>(null);
@@ -41,13 +43,18 @@ export function ParallaxComponent() {
       });
     }
 
-    const lenis = new Lenis();
+    const lenis = new Lenis({
+      lerp: 0.1,
+      smoothWheel: true,
+      syncTouch: false,
+    });
+    (window as any).lenis = lenis;
     lenis.on('scroll', ScrollTrigger.update);
     const updateRaf = (time: number) => {
       lenis.raf(time * 1000);
     };
     gsap.ticker.add(updateRaf);
-    gsap.ticker.lagSmoothing(0);
+    gsap.ticker.lagSmoothing(500, 33);
 
     return () => {
       ScrollTrigger.getAll().forEach((st) => st.kill());
@@ -56,6 +63,7 @@ export function ParallaxComponent() {
       }
       gsap.ticker.remove(updateRaf);
       lenis.destroy();
+      delete (window as any).lenis;
     };
   }, []);
 
@@ -69,7 +77,10 @@ export function ParallaxComponent() {
             <img
               src="/club-gp.jpg"
               loading="eager"
-              width="800"
+              fetchPriority="high"
+              decoding="async"
+              width="1920"
+              height="1280"
               data-parallax-layer="1"
               alt="E-Club Group Photo"
               className="parallax__layer-img"
@@ -85,6 +96,8 @@ export function ParallaxComponent() {
         <EventsSection />
         <CoreTeamSection />
         <DomainsSection />
+        <JoinSection />
+        <Footer />
       </section>
     </div>
   );

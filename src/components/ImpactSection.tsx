@@ -13,6 +13,7 @@ const stats = [
     description: "Active hackers and builders across 40+ hackathons",
     icon: Users,
     accent: "#10b981",
+    progress: "65%",
   },
   {
     target: 12,
@@ -22,6 +23,7 @@ const stats = [
     description: "Total funding secured by student founders",
     icon: DollarSign,
     accent: "#3b82f6",
+    progress: "55%",
   },
   {
     target: 85,
@@ -31,6 +33,7 @@ const stats = [
     description: "Early-stage ventures launched in our incubator",
     icon: Rocket,
     accent: "#8b5cf6",
+    progress: "65%",
   },
   {
     target: 14,
@@ -40,12 +43,13 @@ const stats = [
     description: "Partner institutions & university chapters",
     icon: Globe,
     accent: "#f59e0b",
+    progress: "75%",
   },
 ];
 
 export function ImpactSection() {
   return (
-    <section id="impact" className="impact-section-clean" style={{ padding: '120px 24px', backgroundColor: '#000000' }}>
+    <section id="impact" className="impact-section-clean py-24 md:py-32 px-6 bg-black">
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: '64px' }}>
           <span 
@@ -66,7 +70,7 @@ export function ImpactSection() {
           >
             ACTIVITY & IMPACT METRICS
           </span>
-          <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: '#ffffff', letterSpacing: '-0.02em', marginBottom: '12px' }}>
+          <h2 style={{ fontSize: 'clamp(2rem, 4.5vw, 2.75rem)', fontWeight: 800, color: '#ffffff', letterSpacing: '-0.02em', marginBottom: '12px' }}>
             Driving Next-Gen Entrepreneurship
           </h2>
           <p style={{ fontSize: '1.05rem', color: 'rgba(255, 255, 255, 0.6)', maxWidth: '600px', margin: '0 auto' }}>
@@ -120,7 +124,7 @@ export function ImpactSection() {
                   </span>
                 </div>
 
-                <div style={{ fontSize: '2.4rem', fontWeight: 800, color: '#ffffff', fontFamily: 'monospace', letterSpacing: '-0.02em', marginBottom: '6px' }}>
+                <div style={{ fontSize: '2.4rem', fontWeight: 800, color: '#ffffff', letterSpacing: '-0.02em', marginBottom: '8px', lineHeight: 1.15 }}>
                   {stat.prefix}
                   <CountingNumber target={stat.target} />
                   {stat.suffix}
@@ -146,7 +150,7 @@ export function ImpactSection() {
                 >
                   <div 
                     style={{
-                      width: '75%',
+                      width: stat.progress,
                       height: '100%',
                       borderRadius: '9999px',
                       background: stat.accent,

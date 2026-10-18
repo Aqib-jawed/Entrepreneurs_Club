@@ -12,18 +12,34 @@
 
 .animate-marquee {
   animation: marquee 40s linear infinite;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 
 
 
-* {
+@layer base {
+  *, ::before, ::after {
+    box-sizing: border-box;
+  }
+}
+
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 100px;
+}
+
+#hero, #impact, #events, #team, #domains, #join {
+  scroll-margin-top: 100px;
 }
 
 html, body {
+  scroll-behavior: auto !important;
   width: 100%;
   min-height: 100%;
   background-color: #000000;
@@ -80,6 +96,8 @@ html.lenis, html.lenis body {
   text-decoration: none;
   display: flex;
   align-items: center;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .logo-dot {
@@ -101,34 +119,27 @@ html.lenis, html.lenis body {
 
 .nav-tab-item {
   position: relative;
-  z-index: 10;
   cursor: pointer;
   padding: 8px 20px;
   font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: rgba(255, 255, 255, 0.7);
-  transition: color 0.2s ease;
   list-style: none;
-}
-
-.nav-tab-item:hover {
-  color: #ffffff;
-}
-
-.nav-tab-item--selected {
-  color: #000000 !important;
+  white-space: nowrap;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-header-cursor {
   position: absolute;
-  z-index: 0;
-  height: 32px;
+  inset: 0;
   border-radius: 9999px;
   background: #ffffff;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-  list-style: none;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.35);
+  z-index: 0;
 }
 
 .nav-header-actions {
@@ -150,6 +161,7 @@ html.lenis, html.lenis body {
   text-decoration: none;
   box-shadow: 0 4px 20px rgba(255, 255, 255, 0.25);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  white-space: nowrap;
 }
 
 .nav-header-cta-btn:hover {
@@ -157,24 +169,153 @@ html.lenis, html.lenis body {
   box-shadow: 0 8px 28px rgba(255, 255, 255, 0.4);
 }
 
+/* Responsive Navigation Breakpoints */
+@media (max-width: 768px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+  .nav-header-root {
+    padding: 14px 16px;
+  }
+  .nav-header-bar {
+    width: 100%;
+  }
+  .mobile-hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 42px;
+    height: 42px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+  .mobile-hamburger:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.35);
+  }
+  .hamburger-bar {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+  .hamburger-bar.open-1 {
+    transform: translateY(3.5px) rotate(45deg);
+  }
+  .hamburger-bar.open-2 {
+    transform: translateY(-3.5px) rotate(-45deg);
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-hamburger {
+    display: none !important;
+  }
+}
+
+/* Mobile Drawer Overlay & Content */
+.mobile-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mobile-drawer-content {
+  width: 82%;
+  max-width: 340px;
+  height: 100%;
+  background: #0b0e14;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.8);
+}
+
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.drawer-close-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.drawer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 32px 0 auto;
+}
+
+.drawer-link {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.drawer-link:hover {
+  color: #ffffff;
+  padding-left: 6px;
+}
+
+.drawer-cta-wrapper {
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 /* Shared Card Base */
-.shared-card {
+.shared-card,
+.stat-card-21st {
   position: relative;
   border-radius: 24px;
   background: rgba(20, 24, 33, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 32px;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateZ(0);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.shared-card:hover {
-  border-color: rgba(255, 255, 255, 0.35);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 25px rgba(255, 255, 255, 0.15);
+.shared-card:hover,
+.stat-card-21st:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 25px rgba(255, 255, 255, 0.12);
 }
 
 /* Domains Grid & Card Styling */
