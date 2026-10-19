@@ -82,11 +82,25 @@ const teamMembers: TeamMember[] = [
 
 export function CnippetTeamMarquee() {
   return (
-    <section className="relative w-full bg-gradient-to-b from-[#1A1F2C] via-[#0E121A] to-[#000000] py-16 md:py-24 text-[#F5F3EE]">
+    <section className="relative w-full overflow-hidden bg-[#0B0E14] min-h-[90vh] md:min-h-screen flex flex-col justify-between py-5 md:py-7 text-[#F5F3EE]">
+      {/* Background Group Photo with Low Transparency showing standing and sitting members */}
+      <div className="absolute inset-0 pointer-events-none select-none overflow-hidden z-0">
+        <img
+          src="/club-gp.jpg"
+          alt="E-Club Full Team Background"
+          className="w-full h-full object-cover object-[center_48%] filter brightness-110 contrast-105"
+        />
+        {/* Balanced tint overlay keeping group photo members clearly visible */}
+        <div className="absolute inset-0 bg-[#0B0E14]/35" />
+        {/* Soft edge blending gradients for smooth transition between sections */}
+        <div className="absolute top-0 inset-x-0 h-16 md:h-20 bg-gradient-to-b from-[#0B0E14] via-[#0B0E14]/70 to-transparent" />
+        <div className="absolute bottom-0 inset-x-0 h-16 md:h-20 bg-gradient-to-t from-[#0B0E14] via-[#0B0E14]/80 to-transparent" />
+      </div>
+
       {/* Background Decorative SVG */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden z-[1]">
         <svg
-          className="absolute right-0 bottom-0 text-[#E8A33D]/5"
+          className="absolute right-0 bottom-0 text-[#E8A33D]/10"
           fill="none"
           height="154"
           viewBox="0 0 460 154"
@@ -110,50 +124,58 @@ export function CnippetTeamMarquee() {
         </svg>
       </div>
 
-      {/* Header Container */}
-      <div className="relative z-10 mx-auto max-w-5xl px-6 mb-12">
-        <SectionHeading
-          icon={
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-user-star"
-            >
-              <path d="M16.051 12.616a1 1 0 0 1 1.909.024l.737 1.452a1 1 0 0 0 .737.535l1.634.256a1 1 0 0 1 .588 1.806l-1.172 1.168a1 1 0 0 0-.282.866l.259 1.613a1 1 0 0 1-1.541 1.134l-1.465-.75a1 1 0 0 0-.912 0l-1.465.75a1 1 0 0 1-1.539-1.133l.258-1.613a1 1 0 0 0-.282-.866l-1.156-1.153a1 1 0 0 1 .572-1.822l1.633-.256a1 1 0 0 0 .737-.535z" />
-              <path d="M8 15H7a4 4 0 0 0-4 4v2" />
-              <circle cx="10" cy="7" r="4" />
-            </svg>
-          }
-          eyebrow="THE PEOPLE BEHIND E-CLUB"
-          title={
-            <>
-              Meet the <span className="text-[#E8A33D]">Core Leadership</span>
-            </>
-          }
-          subtitle="The driving force powering innovation, hands-on workshops, venture creation, and student leadership."
-        />
+      {/* Top Header Container */}
+      <div className="relative z-10 mx-auto max-w-4xl px-6 mb-1">
+        <div className="backdrop-blur-[2px] rounded-2xl py-1 text-center">
+          <SectionHeading
+            icon={
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-user-star"
+              >
+                <path d="M16.051 12.616a1 1 0 0 1 1.909.024l.737 1.452a1 1 0 0 0 .737.535l1.634.256a1 1 0 0 1 .588 1.806l-1.172 1.168a1 1 0 0 0-.282.866l.259 1.613a1 1 0 0 1-1.541 1.134l-1.465-.75a1 1 0 0 0-.912 0l-1.465.75a1 1 0 0 1-1.539-1.133l.258-1.613a1 1 0 0 0-.282-.866l-1.156-1.153a1 1 0 0 1 .572-1.822l1.633-.256a1 1 0 0 0 .737-.535z" />
+                <path d="M8 15H7a4 4 0 0 0-4 4v2" />
+                <circle cx="10" cy="7" r="4" />
+              </svg>
+            }
+            eyebrow="THE PEOPLE BEHIND E-CLUB"
+            title={
+              <>
+                Meet the <span className="text-[#E8A33D]">Core Leadership</span>
+              </>
+            }
+            subtitle="The driving force powering innovation, hands-on workshops, venture creation, and student leadership."
+          />
+        </div>
       </div>
 
-      {/* FULL-WIDTH Marquee Track (edge-to-edge) */}
-      <div className="relative w-full overflow-hidden my-4 no-scrollbar">
-        {/* Edge Fade Gradients */}
-        <div className="pointer-events-none absolute top-0 left-0 z-30 h-full w-24 md:w-40 bg-gradient-to-r from-[#0E121A] to-transparent" />
-        <div className="pointer-events-none absolute top-0 right-0 z-30 h-full w-24 md:w-40 bg-gradient-to-l from-[#0E121A] to-transparent" />
+      {/* Middle Open Stage: standing & sitting members are positioned here in clear view */}
+      <div className="relative z-10 flex-1 min-h-[90px] pointer-events-none" />
 
-        <Marquee className="[--gap:1.5rem]" pauseOnHover>
+      {/* Bottom Dock: FULL-WIDTH Marquee Track with Highlighting Runway Frame */}
+      <div className="relative z-10 w-full overflow-hidden mt-auto py-2 bg-[#0B0E14]/45 backdrop-blur-[3px] border-y border-[#E8A33D]/20 no-scrollbar">
+        {/* Edge Fade Gradients */}
+        <div className="pointer-events-none absolute top-0 left-0 z-30 h-full w-20 md:w-36 bg-gradient-to-r from-[#0B0E14] to-transparent" />
+        <div className="pointer-events-none absolute top-0 right-0 z-30 h-full w-20 md:w-36 bg-gradient-to-l from-[#0B0E14] to-transparent" />
+
+        <Marquee className="[--gap:1.25rem] md:[--gap:1.5rem]" pauseOnHover>
           {teamMembers.map((member) => (
             <div
-              className="group/card flex w-80 shrink-0 flex-col transition-transform duration-300 ease-out hover:-translate-y-2 [transform:translateZ(0)]"
+              className="group/card flex w-44 md:w-52 shrink-0 flex-col transition-transform duration-300 ease-out hover:-translate-y-2 [transform:translateZ(0)]"
               key={member.name}
             >
-              <div className="relative h-[420px] w-full overflow-hidden rounded-2xl bg-[#141822] border border-[#F5F3EE]/10 shadow-xl group-hover/card:border-[#E8A33D]/40 group-hover/card:shadow-2xl group-hover/card:shadow-[#E8A33D]/15 transition-all duration-300">
+              <div className="relative h-[200px] md:h-[220px] w-full overflow-hidden rounded-2xl bg-[#121622]/85 backdrop-blur-md border-2 border-[#E8A33D]/30 shadow-[0_8px_24px_rgba(0,0,0,0.85),0_0_16px_rgba(232,163,61,0.15)] group-hover/card:border-[#E8A33D] group-hover/card:shadow-[0_14px_32px_rgba(0,0,0,0.95),0_0_24px_rgba(232,163,61,0.35)] transition-all duration-300">
+                {/* Glowing Top Amber Highlight Accent Line */}
+                <div className="absolute top-0 inset-x-0 h-[2.5px] bg-gradient-to-r from-transparent via-[#E8A33D] to-transparent opacity-80 group-hover/card:opacity-100 transition-opacity z-20" />
+
                 {/* Team member photo with smooth grayscale-to-color transition */}
                 <img
                   alt={member.name}
@@ -161,16 +183,16 @@ export function CnippetTeamMarquee() {
                   src={member.image}
                   loading="lazy"
                   decoding="async"
-                  width="320"
-                  height="420"
+                  width="208"
+                  height="220"
                 />
                 
                 {/* Dark Gradient Overlay at Bottom Section */}
-                <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#0B0E14] via-[#0B0E14]/90 to-transparent p-5 flex flex-col justify-end pointer-events-none rounded-b-2xl">
-                  <h3 className="font-bold text-white text-lg leading-snug truncate">
+                <div className="absolute inset-x-0 bottom-0 h-[48%] bg-gradient-to-t from-[#0B0E14] via-[#0B0E14]/90 to-transparent p-2.5 md:p-3 flex flex-col justify-end pointer-events-none rounded-b-2xl z-10">
+                  <h3 className="font-bold text-white text-xs md:text-sm leading-tight truncate">
                     {member.name}
                   </h3>
-                  <p className="text-xs text-[#E8A33D] font-mono font-semibold mt-1">
+                  <p className="text-[10px] md:text-[11px] text-[#E8A33D] font-mono font-medium mt-0.5 truncate">
                     {member.role}
                   </p>
                 </div>

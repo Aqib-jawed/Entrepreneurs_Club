@@ -750,12 +750,44 @@ html.lenis, html.lenis body {
   will-change: transform;
 }
 
+/* Hero Video Responsive Viewport: Occupies screen with minimal borders */
+.hero-video-wrapper {
+  position: relative;
+  width: min(94vw, calc((100vh - 120px) * 1.68));
+  max-width: 1500px;
+  aspect-ratio: 480 / 285;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  z-index: 2;
+  will-change: transform;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 62.8%;
+  pointer-events: none;
+  background-color: #000000;
+  will-change: transform;
+}
+
+@media (max-width: 768px) {
+  .hero-video-wrapper {
+    width: 95vw;
+    margin-top: 12px;
+  }
+}
+
 .parallax__fade {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 25vh;
+  height: 8vh;
   background: linear-gradient(to bottom, transparent, #000000);
   z-index: 6;
   pointer-events: none;
@@ -771,3 +803,4 @@ html.lenis, html.lenis body {
 .w-full {
   width: 100%;
 }
+

@@ -67,24 +67,35 @@ export function ParallaxComponent() {
     };
   }, []);
 
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
+      videoRef.current.play().catch(() => {});
+    }
+  }, []);
+
   return (
     <div className="parallax" ref={parallaxRef}>
-      {/* Page 1: Group Photo Hero Viewport */}
+      {/* Page 1: Hero Video Viewport */}
       <section className="parallax__header" id="hero">
         <div className="parallax__visuals">
           <div className="parallax__black-line-overflow"></div>
           <div data-parallax-layers className="parallax__layers">
-            <img
-              src="/club-gp.jpg"
-              loading="eager"
-              fetchPriority="high"
-              decoding="async"
-              width="1920"
-              height="1280"
-              data-parallax-layer="1"
-              alt="E-Club Group Photo"
-              className="parallax__layer-img"
-            />
+            <div className="hero-video-wrapper" data-parallax-layer="1">
+              <video
+                ref={videoRef}
+                src="/e-club-video.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                className="hero-video"
+              />
+            </div>
           </div>
           <div className="parallax__fade"></div>
         </div>
