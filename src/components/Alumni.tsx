@@ -2,23 +2,16 @@
 
 import SectionHeading from "@/components/SectionHeading";
 import { CalendlyCarousel, type CarouselItem } from "@/components/ui/connected-carousel";
-import { alumni, alumniVisible } from "@/data/alumni";
-
-const previewEnabled = process.env.NODE_ENV === "development";
+import { alumni } from "@/data/alumni";
 
 export default function Alumni() {
-  const verifiedStories = alumni.filter((person) => person.verified);
-  const stories = previewEnabled ? alumni : verifiedStories;
-  const isVisible = previewEnabled || (alumniVisible && verifiedStories.length >= 3);
+  if (alumni.length === 0) return null;
 
-  if (!isVisible || stories.length === 0) return null;
-
-  const items: CarouselItem[] = stories.map((story) => ({
+  const items: CarouselItem[] = alumni.map((story) => ({
     id: story.id,
-    stat: story.outcome,
-    quote: story.quote,
+    stat: "E-Club Alumni",
     author: story.name,
-    role: story.role,
+    role: "Alumni community",
     defaultImage: story.image ?? "/faculty/placeholder.svg",
     selectedImage: story.image ?? "/faculty/placeholder.svg",
     alt: `Portrait of ${story.name}`,
@@ -47,9 +40,6 @@ export default function Alumni() {
 
         <CalendlyCarousel items={items} autoPlayInterval={6000} pauseOnHover={false} />
 
-        {previewEnabled ? (
-          <p className="alumni-preview-note">Development preview · placeholder story details</p>
-        ) : null}
       </div>
     </section>
   );
