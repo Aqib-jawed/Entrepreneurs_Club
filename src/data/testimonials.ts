@@ -13,11 +13,11 @@ export const testimonialsVisible: boolean = false;
 
 export const testimonials: Testimonial[] = [
   // TODO: Replace with a member-approved name, affiliation, exact quote, and optional portrait.
-  { id: "member-01", name: "Member Name", affiliation: "Domain, Year", quote: "Placeholder: replace with the member's own words.", verified: false },
+  { id: "member-01", name: "Member Name", affiliation: "Domain, Year", quote: "Placeholder: replace with the member's own words.", image: "/testimonials/manas.jpeg", focus: "50% 24%", verified: false },
   // TODO: Replace with a member-approved name, affiliation, exact quote, and optional portrait.
-  { id: "member-02", name: "Member Name", affiliation: "Domain, Year", quote: "Placeholder: replace with the member's own words.", verified: false },
+  { id: "member-02", name: "Member Name", affiliation: "Domain, Year", quote: "Placeholder: replace with the member's own words.", image: "/testimonials/kranthi.jpeg", focus: "50% 20%", verified: false },
   // TODO: Replace with a member-approved name, affiliation, exact quote, and optional portrait.
-  { id: "member-03", name: "Member Name", affiliation: "Domain, Year", quote: "Placeholder: replace with the member's own words.", verified: false },
+  { id: "member-03", name: "Member Name", affiliation: "Domain, Year", quote: "Placeholder: replace with the member's own words.", image: "/testimonials/harshitha.jpeg", focus: "50% 22%", verified: false },
   // TODO: Replace with a member-approved name, affiliation, exact quote, and optional portrait.
   { id: "member-04", name: "Member Name", affiliation: "Domain, Year", quote: "Placeholder: replace with the member's own words.", verified: false },
   // TODO: Replace with a member-approved name, affiliation, exact quote, and optional portrait.

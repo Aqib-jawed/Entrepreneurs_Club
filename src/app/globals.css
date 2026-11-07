@@ -731,3 +731,5 @@ a { color: inherit; }
   .testimonials-reveal, .testimonials-reveal.is-revealed { transform: none; transition: opacity .2s ease; }
   .testimonials-thumbnail, .testimonials-control { transition: none; }
 }
+
+@tailwind utilities;

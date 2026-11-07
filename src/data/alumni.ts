@@ -15,15 +15,15 @@ export const alumniVisible: boolean = false;
 
 export const alumni: Alumni[] = [
   // TODO: Replace with an alumnus-approved name, batch, outcome, role, quote and portrait.
-  { id: "alumni-01", name: "Alumni Name", batch: "Batch of 20XX", outcome: "Placeholder outcome", role: "Placeholder role", verified: false },
+  { id: "alumni-01", name: "Manas", batch: "Batch of 20XX", outcome: "Placeholder outcome", role: "Placeholder role", image: "/alumni/alumni-01.webp", focus: "50% 20%", verified: false },
   // TODO: Replace with an alumnus-approved name, batch, outcome, role, quote and portrait.
-  { id: "alumni-02", name: "Alumni Name", batch: "Batch of 20XX", outcome: "Placeholder outcome", role: "Placeholder role", verified: false },
+  { id: "alumni-02", name: "Kranthi", batch: "Batch of 20XX", outcome: "Placeholder outcome", role: "Placeholder role", image: "/alumni/alumni-02.webp", focus: "50% 20%", verified: false },
   // TODO: Replace with an alumnus-approved name, batch, outcome, role, quote and portrait.
-  { id: "alumni-03", name: "Alumni Name", batch: "Batch of 20XX", outcome: "Placeholder outcome", role: "Placeholder role", verified: false },
+  { id: "alumni-03", name: "Harshitha", batch: "Batch of 20XX", outcome: "Placeholder outcome", role: "Placeholder role", image: "/alumni/alumni-03.webp", focus: "50% 20%", verified: false },
   // TODO: Replace with an alumnus-approved name, batch, outcome, role, quote and portrait.
-  { id: "alumni-04", name: "Alumni Name", batch: "Batch of 20XX", outcome: "Placeholder outcome", role: "Placeholder role", verified: false },
+  { id: "alumni-04", name: "Vijay", batch: "Batch of 20XX", outcome: "Placeholder outcome", role: "Placeholder role", image: "/alumni/alumni-04.webp", focus: "50% 20%", verified: false },
   // TODO: Replace with an alumnus-approved name, batch, outcome, role, quote and portrait.
-  { id: "alumni-05", name: "Alumni Name", batch: "Batch of 20XX", outcome: "Placeholder outcome", role: "Placeholder role", verified: false },
+  { id: "alumni-05", name: "Dhatri", batch: "Batch of 20XX", outcome: "Placeholder outcome", role: "Placeholder role", image: "/alumni/alumni-05.webp", focus: "50% 20%", verified: false },
 ];
 
 const placeholderWord = /placeholder/i;

@@ -8,48 +8,43 @@ export type FacultyMember = {
   profileUrl?: string;
 };
 
-// TODO: set to true only when real faculty details are confirmed.
-export const facultyVisible: boolean = false;
+export const facultyVisible = true;
 
 export const facultyMembers: FacultyMember[] = [
-  // TODO: Replace this placeholder only after the faculty member's details are confirmed.
   {
-    id: "faculty-01",
-    name: "Faculty Member 01",
-    designation: "[TODO: Confirm official designation]",
-    roleInClub: "[TODO: Confirm contribution to the club]",
-    image: "/faculty/placeholder.svg",
+    id: "vikas-kumar-srivastav",
+    name: "Vikas Kumar Srivastav",
+    designation: "Deputy Director, Venture Development Centre",
+    roleInClub: "Deputy Director, Venture Development Centre",
+    image: "/faculty/vikas-kumar-srivastav.webp",
+    focus: "50% 25%",
+    profileUrl: "https://www.linkedin.com/in/theideaenabler/",
   },
-  // TODO: Replace this placeholder only after the faculty member's details are confirmed.
   {
-    id: "faculty-02",
-    name: "Faculty Member 02",
-    designation: "[TODO: Confirm official designation]",
-    roleInClub: "[TODO: Confirm contribution to the club]",
-    image: "/faculty/placeholder.svg",
+    id: "sandhyarani-vandrasi",
+    name: "Sandhyarani Vandrasi",
+    designation: "Senior Venture Coach",
+    roleInClub: "Senior Venture Coach",
+    image: "/faculty/sandhyarani-vandrasi.webp",
+    focus: "50% 28%",
+    profileUrl: "https://www.linkedin.com/in/sandhyarani-vandrasi/",
   },
-  // TODO: Replace this placeholder only after the faculty member's details are confirmed.
   {
-    id: "faculty-03",
-    name: "Faculty Member 03",
-    designation: "[TODO: Confirm official designation]",
-    roleInClub: "[TODO: Confirm contribution to the club]",
-    image: "/faculty/placeholder.svg",
+    id: "monica-goud",
+    name: "Monica Goud",
+    designation: "Startup Ecosystem Mentor",
+    roleInClub: "Startup Ecosystem Mentor",
+    image: "/faculty/monica-goud.webp",
+    focus: "50% 28%",
+    profileUrl: "https://www.linkedin.com/in/monica-goud/",
   },
-  // TODO: Replace this placeholder only after the faculty member's details are confirmed.
   {
-    id: "faculty-04",
-    name: "Faculty Member 04",
-    designation: "[TODO: Confirm official designation]",
-    roleInClub: "[TODO: Confirm contribution to the club]",
-    image: "/faculty/placeholder.svg",
-  },
-  // TODO: Replace this placeholder only after the faculty member's details are confirmed.
-  {
-    id: "faculty-05",
-    name: "Faculty Member 05",
-    designation: "[TODO: Confirm official designation]",
-    roleInClub: "[TODO: Confirm contribution to the club]",
-    image: "/faculty/placeholder.svg",
+    id: "deepesh-vangapulusu",
+    name: "Deepesh Vangapulusu",
+    designation: "Venture Coach",
+    roleInClub: "Venture Coach",
+    image: "/faculty/deepesh-vangapulusu.webp",
+    focus: "50% 28%",
+    profileUrl: "https://www.linkedin.com/in/deepeshvangapulusu/",
   },
 ];

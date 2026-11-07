@@ -79,7 +79,7 @@ export default function Faculty() {
           title="Backed by"
           titleAccent="experience"
           tagline="Guidance that helps bold ideas grow."
-          copy="[TODO: Add verified copy about the faculty's support for E-Club.]"
+          copy="Meet the mentors supporting venture development, startup guidance, and founder coaching."
         />
 
         <div

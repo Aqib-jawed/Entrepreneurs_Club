@@ -30,4 +30,9 @@ export const galleryItems: GalleryItem[] = [
   { id: "gallery-06", type: "image", src: "/gallery/gallery-06.webp", thumb: "/gallery/gallery-06-thumb.webp", alt: "Students taking part in entrepreneurial charades", width: 1024, height: 683 },
   { id: "gallery-07", type: "image", src: "/gallery/gallery-07.webp", thumb: "/gallery/gallery-07-thumb.webp", alt: "Student presenting a rose to community members", width: 1024, height: 683 },
   { id: "gallery-08", type: "image", src: "/gallery/gallery-08.webp", thumb: "/gallery/gallery-08-thumb.webp", alt: "Visitors exploring a sustainable products store", width: 1024, height: 683 },
+  { id: "gallery-09", type: "image", src: "/gallery/gallery-09.webp", thumb: "/gallery/gallery-09-thumb.webp", alt: "A group of women gathered outdoors in the evening", width: 1024, height: 768 },
+  { id: "gallery-10", type: "image", src: "/gallery/gallery-10.webp", thumb: "/gallery/gallery-10-thumb.webp", alt: "Students and E-Club members with a certificate in a classroom", width: 1024, height: 768 },
+  { id: "gallery-11", type: "image", src: "/gallery/gallery-11.webp", thumb: "/gallery/gallery-11-thumb.webp", alt: "Students gathered for a group photo in a classroom", width: 1024, height: 768 },
+  { id: "gallery-12", type: "image", src: "/gallery/gallery-12.webp", thumb: "/gallery/gallery-12-thumb.webp", alt: "Panel discussion at an entrepreneurship event", width: 1024, height: 683 },
+  { id: "gallery-13", type: "image", src: "/gallery/gallery-13.webp", thumb: "/gallery/gallery-13-thumb.webp", alt: "Students attending a workshop in a lecture hall", width: 1024, height: 576 },
 ];

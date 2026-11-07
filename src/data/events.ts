@@ -28,14 +28,10 @@ export const events: EventRecord[] = [
   { id: "event-05", title: "Event 05 — title to confirm", date: EVENT_DATE_TODO, cover: "/events/IMG_0710.webp", domain: "Domain to confirm", attendance: "To be confirmed", outcome: "[TODO: Add verified outcome]", description: "[TODO: Add a short description using confirmed event details.]", gallery: ["/events/IMG_0710.webp"], featured: true },
   // TODO: Confirm the event name, date, domain, attendance, and outcome for this photo.
   { id: "event-06", title: "Event 06 — title to confirm", date: EVENT_DATE_TODO, cover: "/events/2W9A0685.webp", domain: "Domain to confirm", attendance: "To be confirmed", outcome: "[TODO: Add verified outcome]", description: "[TODO: Add a short description using confirmed event details.]", gallery: ["/events/2W9A0685.webp"], featured: true },
-  // TODO: Replace the placeholder art and confirm all event facts.
-  { id: "event-07", title: "Event 07 — details to confirm", date: EVENT_DATE_TODO, cover: "/events/event-placeholder.svg", domain: "Domain to confirm", attendance: "To be confirmed", outcome: "[TODO: Add verified outcome]", description: "[TODO: Add a short description using confirmed event details.]", gallery: ["/events/event-placeholder.svg"], featured: false },
-  // TODO: Replace the placeholder art and confirm all event facts.
-  { id: "event-08", title: "Event 08 — details to confirm", date: EVENT_DATE_TODO, cover: "/events/event-placeholder.svg", domain: "Domain to confirm", attendance: "To be confirmed", outcome: "[TODO: Add verified outcome]", description: "[TODO: Add a short description using confirmed event details.]", gallery: ["/events/event-placeholder.svg"], featured: false },
-  // TODO: Replace the placeholder art and confirm all event facts.
-  { id: "event-09", title: "Event 09 — details to confirm", date: EVENT_DATE_TODO, cover: "/events/event-placeholder.svg", domain: "Domain to confirm", attendance: "To be confirmed", outcome: "[TODO: Add verified outcome]", description: "[TODO: Add a short description using confirmed event details.]", gallery: ["/events/event-placeholder.svg"], featured: false },
-  // TODO: Replace the placeholder art and confirm all event facts.
-  { id: "event-10", title: "Event 10 — details to confirm", date: EVENT_DATE_TODO, cover: "/events/event-placeholder.svg", domain: "Domain to confirm", attendance: "To be confirmed", outcome: "[TODO: Add verified outcome]", description: "[TODO: Add a short description using confirmed event details.]", gallery: ["/events/event-placeholder.svg"], featured: false },
+  // TODO: Confirm the event date, domain, attendance, and outcome.
+  { id: "event-07", title: "FUEL", date: EVENT_DATE_TODO, cover: "/events/event-fuel.webp", domain: "Domain to confirm", attendance: "To be confirmed", outcome: "[TODO: Add verified outcome]", description: "[TODO: Add a short description using confirmed event details.]", gallery: ["/events/event-fuel.webp"], featured: true },
+  // TODO: Confirm the event name, date, domain, attendance, and outcome.
+  { id: "event-08", title: "Women's Event", date: EVENT_DATE_TODO, cover: "/events/event-womens.webp", domain: "Domain to confirm", attendance: "To be confirmed", outcome: "[TODO: Add verified outcome]", description: "[TODO: Add a short description using confirmed event details.]", gallery: ["/events/event-womens.webp"], featured: true },
 ];
 
 export const featuredEvents = events.filter((event) => event.featured);

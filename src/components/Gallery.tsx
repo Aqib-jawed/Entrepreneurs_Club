@@ -156,7 +156,7 @@ export default function Gallery() {
       ) : null}
 
       <div className="gallery-infinite__title">
-        <h2><span>Shadway</span></h2>
+        <h2><span>Gallery</span></h2>
       </div>
       <div className="gallery-infinite__instructions" aria-hidden="true">
         <p>Use mouse wheel, arrow keys, or touch to navigate</p>

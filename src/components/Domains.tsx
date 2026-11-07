@@ -5,9 +5,11 @@ import { useEffect, useRef, useState } from "react";
 import Modal from "@/components/Modal";
 import { domains, type DomainRecord } from "@/data/domains";
 import { events } from "@/data/events";
+import { ScrollTrigger } from "@/lib/gsap";
 
 const COLS = 4;
 const ROWS = 3;
+const DOMAIN_SCROLL_PER_TILE_VH = 45;
 
 type DomainTileProps = {
   domain: DomainRecord;
@@ -92,6 +94,30 @@ export default function Domains() {
     update();
     query.addEventListener("change", update);
     return () => query.removeEventListener("change", update);
+  }, []);
+
+  useEffect(() => {
+    const grid = gridRef.current;
+    const sequenceMedia = window.matchMedia("(hover: hover) and (pointer: fine) and (min-width: 1024px) and (prefers-reduced-motion: no-preference)");
+    if (!grid || !sequenceMedia.matches || domains.length < 2) return;
+
+    const trigger = ScrollTrigger.create({
+      id: "domains-picture-sequence",
+      trigger: grid,
+      start: "top top",
+      end: () => `+=${domains.length * DOMAIN_SCROLL_PER_TILE_VH}vh`,
+      pin: grid,
+      pinSpacing: true,
+      scrub: true,
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
+      onUpdate: (self) => {
+        const index = Math.min(domains.length - 1, Math.floor(self.progress * domains.length));
+        setActiveIndex((current) => current === index ? current : index);
+      },
+    });
+
+    return () => trigger.kill();
   }, []);
 
   useEffect(() => {

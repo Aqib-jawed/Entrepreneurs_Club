@@ -17,9 +17,9 @@ export default function HomePage() {
       <Domains />
       <Team />
       <Faculty />
-      <Gallery />
-      <Testimonials />
       <Alumni />
+      <Testimonials />
+      <Gallery />
     </main>
   );
 }

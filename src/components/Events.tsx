@@ -7,8 +7,8 @@ import { events, EVENT_DATE_TODO, featuredEvents, type EventRecord } from "@/dat
 import { gsap, ScrollTrigger, isWindowScroller, observeWindowResize, useGSAP, waitForScrollerReady } from "@/lib/gsap";
 
 const INITIAL_DELAY_VH = 40;
-const FINAL_DELAY_VH = 40;
-const SCROLL_PER_TRANSITION_VH = 115;
+const SCROLL_PER_TRANSITION_VH = 135;
+const FINAL_DELAY_VH = SCROLL_PER_TRANSITION_VH;
 const TOTAL_SCROLL_VH = INITIAL_DELAY_VH + FINAL_DELAY_VH + Math.max(0, featuredEvents.length - 1) * SCROLL_PER_TRANSITION_VH;
 
 function formatEventDate(date: string) {
@@ -213,7 +213,7 @@ export default function Events() {
           end: `+=${totalScroll}`,
           pin: stage,
           pinSpacing: true,
-          scrub: 0.8,
+          scrub: true,
           anticipatePin: 1,
           invalidateOnRefresh: true,
           refreshPriority: 1,
